@@ -5,6 +5,15 @@ metricCard.setAttribute('class', 'metric-card');    //Assigning class metric-car
 metricCard.setAttribute('id', 'revenueCard');       //Assigning id revenueCard
 metricCard.innerHTML = `    
   <h2>Revenue</h2> 
-  <p2>$0</p2>
+  <p>$0</p>
 `;      //Populate card with "Revenue" and placeholder value
 dashboard.appendChild(metricCard);  //Append new metric card to the dashboard container with appendChild
+
+//Task 2 - Updated Metric Cards via Array Conversion
+const selectMetricCards = document.querySelectorAll('metric-card'); //Use document.querySelectorAll to select elements with "metric-card"
+const arrayOfMetricCards = Array.from(selectMetricCards);   //Use Array.from to convert into an array
+arrayOfMetricCards.forEach(card => {
+    card.querySelector('h2') =+ ' - Updated'    //Array list h2 as "- Updated"
+    card.querySelector('p') =+ ' - Updated'     //Array list p as "- Updated"
+}
+);
