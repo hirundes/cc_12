@@ -17,3 +17,21 @@ arrayOfMetricCards.forEach(card => {
     card.querySelector('p') =+ ' - Updated'     //Array list p as "- Updated"
 }
 );
+
+//Task 3 - Implemented Dynamic Inventory List
+const inventoryList = document.getElementById("inventoryList")
+function addInventoryItem(productName) {
+  const li = document.createElement("li")
+  li.setAttribute('class', "product-item")
+  li.textContent = productName 
+  li.addEventListener("click", function() {
+    removeInventoryItem(li)
+  })
+inventoryList.appendChild(li)
+};
+
+function removeInventoryItem(item) {
+  inventoryList.removeChild(item);
+};
+
+addInventoryItem("Phone");
