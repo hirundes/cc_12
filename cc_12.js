@@ -60,10 +60,3 @@ document.querySelectorAll(".customer-card")
     event.stopPropagation();
   });
 });
-
-
-
-
-
-
-
