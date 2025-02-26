@@ -35,3 +35,35 @@ function removeInventoryItem(item) {
 };
 
 addInventoryItem("Phone");
+
+//Task 4 - Demonstrated Event Bubbling in Customer Section
+const customerSection = document.getElementById("customerSection")
+
+const customerCard1 = document.createElement("div");
+customerCard1.setAttribute("class", "customer-card");
+customerCard1.textContent = "Customer 1";
+customerSection.appendChild(customerCard1);
+
+const customerCard2 = document.createElement("div");
+customerCard2.setAttribute("class", "customer-card");
+customerCard2.textContent = "Customer 2";
+customerSection.appendChild(customerCard2);
+
+customerSection.addEventListener("click", function() {
+  console.log("Customer section was clicked")
+});
+
+document.querySelectorAll(".customer-card")
+.forEach(card => {
+  card.addEventListener("click", function(event) {
+    console.log("Customer card clicked")
+    event.stopPropagation();
+  })
+})
+
+
+
+
+
+
+
