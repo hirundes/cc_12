@@ -6,7 +6,8 @@ metricCard.setAttribute('id', 'revenueCard');       //Assigning id revenueCard
 metricCard.innerHTML = `    
   <h2>Revenue</h2> 
   <p>$0</p>
-`;      //Populate card with "Revenue" and placeholder value
+`
+;      //Populate card with "Revenue" and placeholder value
 dashboard.appendChild(metricCard);  //Append new metric card to the dashboard container with appendChild
 
 //Task 2 - Updated Metric Cards via Array Conversion
