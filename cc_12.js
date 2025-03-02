@@ -35,7 +35,6 @@ function removeInventoryItem(item) {
   inventoryList.removeChild(item);    //Use removeChild within the inventory list
 };
 
-addInventoryItem("New Product");
 
 //Task 4 - Demonstrated Event Bubbling in Customer Section
 const customerSection = document.getElementById("customerSection")  //Nested structure with parent container "customerSection"
